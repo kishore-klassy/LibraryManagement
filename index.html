@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Basic table styling */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Center align text in specific columns */
+        th.centeralign {
+            text-align: center;
+        }
+
+        /* Center align text in specific columns */
+
+
+        th.foreign {}
+
+        th.primary {}
+
+        /* Hover effect */
+        th,
+        tr:hover {
+            transform: scale(1.05);
+            /* Enlarge by 5% on hover */
+            transition: transform 0.2s ease-in-out;
+            background-color: #030303;
+            color: white;
+            /* Change background color on hover */
+        }
+
+        .separator {
+            border-top: 2px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>BOOKS</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author ID (F)</th>
+                <th>Price</th>
+                <th>Pages</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="centeralign">1</td>
+                <td>The Great Gatsby</td>
+                <td>3</td>
+                <td class="centeralign">$12.99</td>
+                <td class="centeralign">180</td>
+                <td>Fiction</td>
+            </tr>
+            <tr>
+                <td class="centeralign">2</td>
+                <td>To Kill a Mockingbird</td>
+                <td>4</td>
+                <td class="centeralign">$14.95</td>
+                <td class="centeralign">324</td>
+                <td>Fiction</td>
+            </tr>
+            <tr>
+                <td class="centeralign">3</td>
+                <td>1984</td>
+                <td>2</td>
+                <td class="centeralign">$9.99</td>
+                <td class="centeralign">328</td>
+                <td>Dystopian</td>
+            </tr>
+            <tr>
+                <td class="centeralign">4</td>
+                <td>The Hobbit</td>
+                <td>1</td>
+                <td class="centeralign">$10.99</td>
+                <td class="centeralign">300</td>
+                <td>Fantasy</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Separator -->
+    <div class="separator"></div>
+
+    <h1>AUTHOR</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Author ID</th>
+                <th>Author Name</th>
+                <th>Country</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="centeralign">1</td>
+                <td>George Orwell</td>
+                <td>Africa</td>
+            </tr>
+            <tr>
+                <td class="centeralign">2</td>
+                <td>Harper Lee</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td class="centeralign">3</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>America</td>
+            </tr>
+            <tr>
+                <td class="centeralign">4</td>
+                <td>J.R.R. Tolkien</td>
+                <td>Australia</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Separator -->
+    <div class="separator"></div>
+    <h1>User</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>phone no</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="centeralign">1</td>
+                <td>George Orwell</td>
+                <td>Africa</td>
+                <td class="centeralign">3</td>
+            </tr>
+            <tr>
+                <td class="centeralign">2</td>
+                <td>Harper Lee</td>
+                <td>India</td>
+                <td class="centeralign">2</td>
+            </tr>
+            <tr>
+                <td class="centeralign">3</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>America</td>
+                <td class="centeralign">1</td>
+            </tr>
+            <tr>
+                <td class="centeralign">4</td>
+                <td>J.R.R. Tolkien</td>
+                <td>Australia</td>
+                <td class="centeralign">4</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
