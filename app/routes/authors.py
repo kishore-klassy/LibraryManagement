@@ -8,13 +8,13 @@ from flask.views import MethodView
 
 app = Flask(__name__)
 
-class BookListView(MethodView) :
+class AuthorListView(MethodView) :
     def get(self) :
         try :
             connecion = sqlite3.connect('my_database.db')
             cursor = connecion.cursor()
             
-            cursor.execute("SELECT * FROM books")
+            cursor.execute("SELECT * FROM authors")
             rows = cursor.fetchall()
             #books = [Book.fromTuple(row).to_dict() for row in rows]
             return rows
@@ -24,19 +24,18 @@ class BookListView(MethodView) :
         if request.method=='POST' :
             data = request.get_json()
 
-            bookId = data['bookId']
-            bookName = data['bookName']
             authorId = data['authorId']
-            price = data['price']
-            journal = data['journal']
+            authorName = data['authorName']
+            country = data['country']
+            
 
             try :
                 connection = sqlite3.connect('my_database.db')
                 cursor = connection.cursor()
 
-                cursor.execute("INSERT INTO books(bookId,bookName,authorId,price,journal) values(?,?,?,?,?)",(bookId,bookName,authorId,price,journal))
+                cursor.execute("INSERT INTO books(authorId,authorName,country) values(?,?,?)",(authorId,authorName,country))
                 connection.commit()
-                return jsonify({'status':'OK','message':'Book added Successfully'})
+                return jsonify({'status':'OK','message':'Author added Successfully'})
             except sqlite3.Error as catch:
                 connection.rollback()
                 print("SQLite error:", catch)
@@ -47,7 +46,7 @@ class BookListView(MethodView) :
 
 
 
-app.add_url_rule('/books',view_func=BookListView.as_view('index'))
+app.add_url_rule('/authors',view_func=AuthorListView.as_view('index'))
 
 if __name__ == '__main__' :
     app.run(debug=True)
